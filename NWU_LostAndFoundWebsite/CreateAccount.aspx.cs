@@ -13,5 +13,24 @@ namespace NWU_LostAndFoundWebsite
         {
 
         }
+
+        protected void btnCreateAccount_Click(object sender, EventArgs e)
+        {
+            String name = txtName.Text;
+            String surname = txtSurname.Text;
+            String email = txtEmail.Text;
+            String contact = txtContact.Text;
+            String password = txtPassword.Text;
+            String reEnterPassword = txtReEnterPass.Text;
+
+            if(password == reEnterPassword)
+            {
+                lblPassNotMatch.Text = "The passwords entered do not match. Please re enter the passowrd";
+            }
+            else
+            {
+
+            }
+        }
     }
 }
