@@ -67,6 +67,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\LostAndFound.mdf" />
+    <Content Include="App_Data\LostAndFound_log.ldf">
+      <DependentUpon>LostAndFound.mdf</DependentUpon>
+    </Content>
     <Content Include="ClaimItem.aspx" />
     <Content Include="CreateAccount.aspx" />
     <Content Include="GenerateReport.aspx" />
