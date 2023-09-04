@@ -23,7 +23,7 @@
             <br />
             <br />
             <br />
-            <asp:Button ID="btnAdminUser" runat="server" Text="Login as Admin" />
+            <asp:Button ID="btnAdminUser" runat="server" OnClick="btnAdminUser_Click" Text="Login as Admin" />
         </div>
     </form>
 </body>

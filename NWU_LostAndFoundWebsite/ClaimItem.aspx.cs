@@ -68,9 +68,9 @@ namespace NWU_LostAndFoundWebsite
                 command.Parameters.AddWithValue();
                 command.Parameters.AddWithValue();
                 
+
+
                 command.ExecuteNonQuery();
-
-
                 connection.Close();
             }catch (Exception ex)
             {
