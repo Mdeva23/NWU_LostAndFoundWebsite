@@ -8,7 +8,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+        <div style="background-color: #CCCCCC">
             North West University Lost And Found Website<br />
             <br />
             Please enter your details to login or click button &quot;Sign up&quot; to create an account<br />
