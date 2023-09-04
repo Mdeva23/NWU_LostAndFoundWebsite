@@ -17,12 +17,12 @@
         <asp:ListBox ID="ListBoxItems" runat="server" Height="295px" Width="789px"></asp:ListBox>
         <br />
 &nbsp;<br />
-        <asp:Button ID="btnClaim" runat="server" Text="Claim Item" Width="130px" />
+        <asp:Button ID="btnClaim" runat="server" Text="Claim Item" Width="130px" OnClick="btnClaim_Click" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="btnReportItem" runat="server" Text="Report Lost Item" OnClick="btnReportItem_Click" />
         <br />
         <br />
-        <asp:HyperLink ID="HyperLinkLogout" runat="server">Logout</asp:HyperLink>
+        <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Logout</asp:LinkButton>
     </form>
 </body>
 </html>
