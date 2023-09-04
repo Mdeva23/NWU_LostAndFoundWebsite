@@ -17,11 +17,12 @@ namespace NWU_LostAndFoundWebsite
         protected void btnSearch_Click(object sender, EventArgs e)
         {
             //this button is to search according to item
+
         }
 
-        protected System.Void btnSearch_Click(System.Object sender, System.EventArgs e)
+        protected void btnReportItem_Click(object sender, EventArgs e)
         {
-            //lol
+            //this is to report items
         }
     }
 }
