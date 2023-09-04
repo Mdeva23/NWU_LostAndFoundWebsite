@@ -14,7 +14,7 @@
 <body>
     <form id="form1" runat="server">
         <div style="background-color: #CCCCCC; font-family: Arial, Helvetica, sans-serif; font-size: small;">
-            <span class="auto-style1" style="color: #0066FF">North West University Lost And Found Website</span><br class="auto-style1" />
+            <span class="auto-style1" style="color: #0066FF"><strong>North West University Lost And Found Website</strong></span><br class="auto-style1" />
             <br />
             Please enter your details to login or click button &quot;Sign up&quot; to create an account<br />
             <br />
