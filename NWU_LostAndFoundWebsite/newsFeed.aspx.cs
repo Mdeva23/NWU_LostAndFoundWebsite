@@ -21,7 +21,7 @@ namespace NWU_LostAndFoundWebsite
 
         protected System.Void btnSearch_Click(System.Object sender, System.EventArgs e)
         {
-
+            //lol
         }
     }
 }
