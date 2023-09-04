@@ -64,9 +64,9 @@ namespace NWU_LostAndFoundWebsite
                 connection.Open();
 
                 //To be confirmed with the database
-                command = new SqlCommand("INSERT INTO () VALUES()", connection);
-                command.Parameters.AddWithValue();
-                command.Parameters.AddWithValue();
+                //command = new SqlCommand("INSERT INTO () VALUES()", connection);
+                //command.Parameters.AddWithValue();
+               // command.Parameters.AddWithValue();
                 
 
 
@@ -82,6 +82,9 @@ namespace NWU_LostAndFoundWebsite
 
         }
 
-       
+        protected void btnAddToDatabase_Click1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -31,7 +31,7 @@
             <br />
             <br />
 &nbsp;
-            <asp:Button ID="btnAddToDatabase" runat="server" Text="Add to database" />
+            <asp:Button ID="btnAddToDatabase" runat="server" Text="Add to database" OnClick="btnAddToDatabase_Click1" />
             <br />
         </div>
     </form>

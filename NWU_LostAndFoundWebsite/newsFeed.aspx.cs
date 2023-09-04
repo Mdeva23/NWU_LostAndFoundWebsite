@@ -57,7 +57,7 @@ namespace NWU_LostAndFoundWebsite
                 cnn = new SqlConnection(connectionstring);
                 cnn.Open();
                 //filter according to name of item
-                adapter = new SqlDataAdapter("SELECT itemName, itemDescription FROM tblItems WHERE itemName LIKE '%" + txtSearchForItem.Text + "%'", cnn);
+                cmd = new SqlCommand("SELECT itemName, itemDescription FROM tblItems WHERE itemName LIKE '%" + txtSearchForItem.Text + "%'", cnn);
                 reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
