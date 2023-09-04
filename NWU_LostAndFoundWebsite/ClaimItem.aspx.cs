@@ -6,14 +6,16 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
+using System.Xml.Linq;
 
 
 namespace NWU_LostAndFoundWebsite
 {
     public partial class ClaimItem : System.Web.UI.Page
     {
-        public string conString = @"";
-        public string conStringReader = @"";
+        public string conString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\David\Dropbox\PC\Desktop\CMPG223\NWU_LostAndFoundWebsite\NWU_LostAndFoundWebsite\NWU_LostAndFoundWebsite\App_Data\LostAndFound.mdf;Integrated Security=True";
+       
         public SqlConnection connection;
         public SqlCommand command;
         public SqlDataAdapter adapter;
@@ -23,11 +25,17 @@ namespace NWU_LostAndFoundWebsite
 
             try
             {
-                connection = new SqlConnection(conStringReader);
+                connection = new SqlConnection(conString);
                 connection.Open();
 
+                command = new SqlCommand("SELECT * FROM ", connection);
+                reader = command.ExecuteReader();
 
-
+                while (reader.Read())
+                {
+                    ListBoxClaimedItem.Items.Add(reader.GetValue(0).ToString());
+                }
+                
 
                 connection.Close();
             }
@@ -55,9 +63,12 @@ namespace NWU_LostAndFoundWebsite
                 connection = new SqlConnection(conString);
                 connection.Open();
 
-
-
-
+                //To be confirmed with the database
+                command = new SqlCommand("INSERT INTO () VALUES()", connection);
+                command.Parameters.AddWithValue();
+                command.Parameters.AddWithValue();
+                
+                command.ExecuteNonQuery();
 
 
                 connection.Close();
