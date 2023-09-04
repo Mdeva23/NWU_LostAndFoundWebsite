@@ -13,5 +13,10 @@ namespace NWU_LostAndFoundWebsite
         {
 
         }
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            //this button is to search according to item
+        }
     }
 }
