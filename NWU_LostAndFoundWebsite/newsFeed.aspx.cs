@@ -83,7 +83,7 @@ namespace NWU_LostAndFoundWebsite
             Response.Redirect("ClaimItem.aspx"); //view the claim item page
         }
 
-        protected System.Void LinkButton1_Click(System.Object sender, System.EventArgs e)
+        protected void LinkButton1_Click(object sender, EventArgs e)
         {
             Response.Redirect("LoginPage.aspx"); //view the login page
         }
