@@ -77,6 +77,7 @@
     <Content Include="LoginPage.aspx" />
     <Content Include="newsFeed.aspx" />
     <Content Include="ReportItem.aspx" />
+    <Content Include="Reports.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -122,6 +123,13 @@
     </Compile>
     <Compile Include="ReportItem.aspx.designer.cs">
       <DependentUpon>ReportItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports.aspx.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports.aspx.designer.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
