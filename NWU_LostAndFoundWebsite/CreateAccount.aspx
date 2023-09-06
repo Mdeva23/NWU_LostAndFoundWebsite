@@ -23,26 +23,26 @@
         &nbsp;&nbsp;&nbsp;&nbsp;
         Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
         <asp:TextBox ID="txtName" runat="server"></asp:TextBox>
-        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtName" ErrorMessage="Required!" SetFocusOnError="True" ForeColor="#CC3399"></asp:RequiredFieldValidator>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtName" ErrorMessage="Required!" SetFocusOnError="True" ForeColor="Red"></asp:RequiredFieldValidator>
         <br />
         &nbsp;&nbsp;&nbsp;&nbsp; Surname:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:TextBox ID="txtSurname" runat="server"></asp:TextBox>
-        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtSurname" ErrorMessage="Required!" SetFocusOnError="True" ForeColor="#CC3399"></asp:RequiredFieldValidator>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtSurname" ErrorMessage="Required!" SetFocusOnError="True" ForeColor="Red"></asp:RequiredFieldValidator>
         <br />
         &nbsp;&nbsp;&nbsp;&nbsp; Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
         <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
-        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtEmail" ErrorMessage="IncorrectFormat" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" SetFocusOnError="True" ForeColor="#CC3399"></asp:RegularExpressionValidator>
+        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtEmail" ErrorMessage="IncorrectFormat" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" SetFocusOnError="True" ForeColor="Red"></asp:RegularExpressionValidator>
         <br />
         &nbsp;&nbsp;&nbsp;&nbsp; Contact:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:TextBox ID="txtContact" runat="server"></asp:TextBox>
         <br />
         <br />
         &nbsp;Please enter your password to protect your account       Password&quot;:&nbsp;&nbsp;
         <asp:TextBox ID="txtPassword" runat="server"></asp:TextBox>
-        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtPassword" ErrorMessage="Required!" SetFocusOnError="True" ForeColor="#CC3399"></asp:RequiredFieldValidator>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtPassword" ErrorMessage="Required!" SetFocusOnError="True" ForeColor="Red"></asp:RequiredFieldValidator>
         <br />
         &nbsp;Re-enter Password:&nbsp;&nbsp;&nbsp;
         <asp:TextBox ID="txtReEnterPass" runat="server"></asp:TextBox>
-        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtReEnterPass" ErrorMessage="Required!" SetFocusOnError="True" ForeColor="#CC3399"></asp:RequiredFieldValidator>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtReEnterPass" ErrorMessage="Required!" SetFocusOnError="True" ForeColor="Red"></asp:RequiredFieldValidator>
         <br />
         <br />
         &nbsp;

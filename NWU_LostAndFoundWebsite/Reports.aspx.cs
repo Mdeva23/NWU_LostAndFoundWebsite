@@ -48,7 +48,23 @@ namespace NWU_LostAndFoundWebsite
 
         protected void btnFilterOrDisplay_Click(object sender, EventArgs e)
         {
+            try
+            {
+                using(con = new SqlConnection(conString))
+                {
+                    con.Open();
 
+                }
+            }
+            catch(Exception ex)
+            {
+                ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + ex.Message + "');", true);
+            }
+        }
+
+        protected void RadioButtonList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

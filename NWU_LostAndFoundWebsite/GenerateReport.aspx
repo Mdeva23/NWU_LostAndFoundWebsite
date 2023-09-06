@@ -21,7 +21,7 @@
             <br />
             Email:<br />
             <asp:TextBox ID="txtAdminEmail" runat="server"></asp:TextBox>
-            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtAdminEmail" ErrorMessage="Incorrect Format!" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" SetFocusOnError="True" ForeColor="#CC3399"></asp:RegularExpressionValidator>
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtAdminEmail" ErrorMessage="Incorrect Format!" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" SetFocusOnError="True" ForeColor="Red"></asp:RegularExpressionValidator>
             <br />
             <br />
             <br />

@@ -12,7 +12,7 @@
             <asp:GridView ID="GridViewReport" runat="server" Height="285px" Width="865px">
             </asp:GridView>
             <br />
-            Type of report:<asp:RadioButtonList ID="RadioButtonList1" runat="server" BorderStyle="Solid">
+            Type of report:<asp:RadioButtonList ID="RadioButtonList1" runat="server" BorderStyle="Solid" OnSelectedIndexChanged="RadioButtonList1_SelectedIndexChanged">
                 <asp:ListItem>View Detailed Report</asp:ListItem>
                 <asp:ListItem>View Reported Items</asp:ListItem>
                 <asp:ListItem>View Claimed Items</asp:ListItem>
