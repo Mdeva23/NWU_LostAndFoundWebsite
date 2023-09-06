@@ -49,13 +49,14 @@ namespace NWU_LostAndFoundWebsite
                     using(con = new SqlConnection(conString))
                     {
                         con.Open();      //OPENING THE SQL CONNECTION
-                        command = new SqlCommand("INSERT INTO tblUsers(userName, userSurname, userEmail, userContact, userPassword) VALUES(@name, @surname, @email, @contact, @pass)", con);   //INSERTING VALUES INTO THE TABLES
+                        //command = new SqlCommand("INSERT INTO tblUsers(userName, userSurname, userEmail, userContact, userPassword) VALUES(@name, @surname, @email, @contact, @pass)", con);
+                        command = new SqlCommand("INSERT INTO tblUsers(userName, userSurname, userEmail, userContact) VALUES(@name, @surname, @email, @contact)", con);   //INSERTING VALUES INTO THE TABLES
                         //command.Parameters.AddWithValue("@id",);
                         command.Parameters.AddWithValue("@name", name);
                         command.Parameters.AddWithValue("@surname", surname);
                         command.Parameters.AddWithValue("@email", email);
                         command.Parameters.AddWithValue("@contact", contact);
-                        command.Parameters.AddWithValue("@pass", password);
+                        //command.Parameters.AddWithValue("@pass", password);
                         command.ExecuteNonQuery();
 
                         Response.Redirect("LoginPage.aspx");

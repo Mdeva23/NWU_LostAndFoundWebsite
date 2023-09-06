@@ -23,7 +23,8 @@ namespace NWU_LostAndFoundWebsite
             cookie.Expires = DateTime.Now.AddMinutes(1);
             Response.Cookies.Add(cookie);
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\David\Dropbox\PC\Desktop\CMPG223\NWU_LostAndFoundWebsite\NWU_LostAndFoundWebsite\NWU_LostAndFoundWebsite\App_Data\LostAndFound.mdf;Integrated Security=True");
-            SqlDataAdapter adapt = new SqlDataAdapter("Select (*) from tblUsers where userName = '" + txtLoginEmail.Text + "' and userPassword = '" + txtLoginPassword.Text, con);
+            //SqlDataAdapter adapt = new SqlDataAdapter("Select (*) from tblUsers where userName = '" + txtLoginEmail.Text + "' and userPassword = '" + txtLoginPassword.Text, con);
+            SqlDataAdapter adapt = new SqlDataAdapter("Select (*) from tblUsers where userName = '" + txtLoginEmail.Text + "'", con);
             DataTable dt = new DataTable();
             adapt.Fill(dt);
             if (dt.Rows[0][0].ToString() == "1")
