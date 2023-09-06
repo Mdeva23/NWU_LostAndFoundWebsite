@@ -30,24 +30,23 @@
             &nbsp;&nbsp;
             <br />
 &nbsp; New Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; New Contact:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; New Contact:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="txtContact" runat="server"></asp:TextBox>
             <br />
             <br />
             &nbsp;&nbsp; &nbsp;
             <br />
-&nbsp; New Password:&nbsp;&nbsp;&nbsp; &nbsp;
-            <asp:TextBox ID="txtPassword" runat="server"></asp:TextBox>
+&nbsp;&nbsp;
             <br />
             <br />
 &nbsp;<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Button ID="btnUpdate" runat="server" Height="29px" Text="Update" Width="124px" Font-Bold="True" Font-Names="Arial Narrow" OnClick="btnUpdate_Click" />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="btnDelete" runat="server" Height="30px" Text="Delete Account" Width="124px" Font-Bold="True" Font-Names="Arial Narrow" />
+            &nbsp;
+            <asp:Button ID="btnUpdate" runat="server" Height="52px" Text="Update" Width="181px" Font-Bold="True" Font-Names="Arial Narrow" OnClick="btnUpdate_Click" />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="btnDelete" runat="server" Height="52px" Text="Delete Account" Width="170px" Font-Bold="True" Font-Names="Arial Narrow" />
             &nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Button ID="btnExit" runat="server" Height="29px" Text="Exit" Width="106px" Font-Bold="True" Font-Names="Arial Narrow" />
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Button ID="btnExit" runat="server" Height="54px" Text="Exit" Width="139px" Font-Bold="True" Font-Names="Arial Narrow" />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;
             <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

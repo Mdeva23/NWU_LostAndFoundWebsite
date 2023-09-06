@@ -12,7 +12,7 @@ namespace NWU_LostAndFoundWebsite
     public partial class newsFeed : System.Web.UI.Page
     {
         //declare public variables
-        String connectionstring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\LostAndFound.mdf;Integrated Security=True";
+        String connectionstring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\David\Dropbox\PC\Desktop\NWU_LostAndFoundWebsite\NWU_LostAndFoundWebsite\NWU_LostAndFoundWebsite\NWU_LostAndFoundWebsite\App_Data\LostAndFound.mdf;Integrated Security=True";
         SqlConnection cnn;
         SqlDataAdapter adapter;
         SqlDataReader reader;

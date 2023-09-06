@@ -28,7 +28,7 @@ namespace NWU_LostAndFoundWebsite
                 cnn = new SqlConnection(connectionstring);
                 cnn.Open();
                 //this is to update the user details
-                cmd = new SqlCommand("UPDATE tblUsers SET userEmail = '" + txtEmail.Text + "', 'userContact = '" + txtContact.Text + "', userPassword = '" + txtPassword.Text + "' WHERE userName = '" + txtName.Text + "' AND userSurname = '" + txtSurname.Text + "' ", cnn);
+                cmd = new SqlCommand("UPDATE tblUsers SET userEmail = '" + txtEmail.Text + "', 'userContact = '" + txtContact.Text + "' WHERE userName = '" + txtName.Text + "' AND userSurname = '" + txtSurname.Text + "' ", cnn);
                 adapter = new SqlDataAdapter();
                 adapter.UpdateCommand = cmd;
                 adapter.UpdateCommand.ExecuteNonQuery();

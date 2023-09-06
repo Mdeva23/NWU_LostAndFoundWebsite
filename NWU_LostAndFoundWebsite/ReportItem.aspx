@@ -13,10 +13,12 @@
             <asp:TextBox ID="txtItemDescription" runat="server" Height="268px" Width="749px"></asp:TextBox>
             <br />
             Category of the Item&nbsp;
-            <asp:DropDownList ID="DropDownListCategory" runat="server">
+            <asp:DropDownList ID="DropDownListCategory" runat="server" OnSelectedIndexChanged="DropDownListCategory_SelectedIndexChanged">
             </asp:DropDownList>
 &nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="DropDownListCategory" ErrorMessage="Required!" SetFocusOnError="True" ForeColor="#CC3399"></asp:RequiredFieldValidator>
             <br />
+            <br />
+            <asp:Label ID="Label1" runat="server" Text="..."></asp:Label>
             <br />
             <br />
             Upload picture of item<br />
