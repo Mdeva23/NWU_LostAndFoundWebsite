@@ -87,5 +87,10 @@ namespace NWU_LostAndFoundWebsite
         {
             Response.Redirect("LoginPage.aspx"); //view the login page
         }
+
+        protected void LinkButtonMaintainAccount_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("MaintainDetails.aspx");//go to maintain details page
+        }
     }
 }
