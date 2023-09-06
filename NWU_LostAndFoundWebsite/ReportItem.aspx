@@ -8,14 +8,14 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+        <div style="font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #CCCCCC;">
             Please add the description of the item<br />
             <asp:TextBox ID="txtItemDescription" runat="server" Height="268px" Width="749px"></asp:TextBox>
             <br />
             Category of the Item&nbsp;
             <asp:DropDownList ID="DropDownListCategory" runat="server">
             </asp:DropDownList>
-&nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="DropDownListCategory" ErrorMessage="Required!" SetFocusOnError="True"></asp:RequiredFieldValidator>
+&nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="DropDownListCategory" ErrorMessage="Required!" SetFocusOnError="True" ForeColor="#CC3399"></asp:RequiredFieldValidator>
             <br />
             <br />
             <br />

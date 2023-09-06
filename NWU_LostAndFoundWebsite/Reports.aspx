@@ -8,7 +8,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+        <div style="font-family: Arial, Helvetica, sans-serif; font-size: small; background-color: #CCCCCC;">
             <asp:GridView ID="GridViewReport" runat="server" Height="285px" Width="865px">
             </asp:GridView>
             <br />
@@ -22,7 +22,7 @@
             Enter the filter you want to apply:<br />
             <asp:TextBox ID="txtFilter" runat="server"></asp:TextBox>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Button ID="btnFilterOrDisplay" runat="server" Text="Filter/Display Report" />
+            <asp:Button ID="btnFilterOrDisplay" runat="server" Text="Filter/Display Report" Font-Bold="True" Font-Names="Arial Narrow" />
         </div>
     </form>
 </body>

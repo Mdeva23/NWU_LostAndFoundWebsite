@@ -13,7 +13,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div style="height: 412px; width: 896px; background-color: #CCCCCC">
+        <div style="height: 351px; width: 896px; background-color: #CCCCCC; font-family: Arial, Helvetica, sans-serif; font-size: small;">
             <strong style="font-family: Arial, Helvetica, sans-serif; color: #3366CC"><span class="auto-style1" style="color: #0066CC; font-family: Arial, Helvetica, sans-serif">North West University Lost and Found Website<br />
             </span></strong>
             <br />
@@ -28,21 +28,21 @@
 &nbsp; Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
             <br />
-&nbsp; Contact:&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp; Contact:&nbsp;&nbsp;&nbsp; &nbsp;
             <asp:TextBox ID="txtContact" runat="server"></asp:TextBox>
             <br />
-&nbsp; Password:
+&nbsp; Password:&nbsp;&nbsp;
             <asp:TextBox ID="txtPassword" runat="server"></asp:TextBox>
             <br />
             <br />
 &nbsp;<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Button ID="Button1" runat="server" Height="39px" Text="Update" Width="101px" />
+            <asp:Button ID="Button1" runat="server" Height="29px" Text="Update" Width="124px" Font-Bold="True" Font-Names="Arial Narrow" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="Button3" runat="server" Height="39px" Text="Delete Account" Width="124px" />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="Button3" runat="server" Height="30px" Text="Delete Account" Width="124px" Font-Bold="True" Font-Names="Arial Narrow" />
             &nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Button ID="Button4" runat="server" Height="39px" Text="Exit" Width="101px" />
+            <asp:Button ID="Button4" runat="server" Height="29px" Text="Exit" Width="106px" Font-Bold="True" Font-Names="Arial Narrow" />
 &nbsp;&nbsp;&nbsp;&nbsp;
             <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
