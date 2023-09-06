@@ -75,8 +75,10 @@
     <Content Include="CreateAccount.aspx" />
     <Content Include="GenerateReport.aspx" />
     <Content Include="LoginPage.aspx" />
+    <Content Include="MaintainDetails.aspx" />
     <Content Include="newsFeed.aspx" />
     <Content Include="ReportItem.aspx" />
+    <Content Include="Reports.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -108,6 +110,13 @@
     <Compile Include="LoginPage.aspx.designer.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="MaintainDetails.aspx.cs">
+      <DependentUpon>MaintainDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaintainDetails.aspx.designer.cs">
+      <DependentUpon>MaintainDetails.aspx</DependentUpon>
+    </Compile>
     <Compile Include="newsFeed.aspx.cs">
       <DependentUpon>newsFeed.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -122,6 +131,13 @@
     </Compile>
     <Compile Include="ReportItem.aspx.designer.cs">
       <DependentUpon>ReportItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports.aspx.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports.aspx.designer.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

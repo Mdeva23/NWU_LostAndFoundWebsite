@@ -11,7 +11,7 @@ namespace NWU_LostAndFoundWebsite
 {
 
 
-    public partial class GenerateReport
+    public partial class Reports
     {
 
         /// <summary>
@@ -24,48 +24,39 @@ namespace NWU_LostAndFoundWebsite
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// txtAdminEmail control.
+        /// GridViewReport control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAdminEmail;
+        protected global::System.Web.UI.WebControls.GridView GridViewReport;
 
         /// <summary>
-        /// RegularExpressionValidator1 control.
+        /// RadioButtonList1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
+        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList1;
 
         /// <summary>
-        /// txtAdminPassword control.
+        /// txtFilter control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAdminPassword;
+        protected global::System.Web.UI.WebControls.TextBox txtFilter;
 
         /// <summary>
-        /// RequiredFieldValidator1 control.
+        /// btnFilterOrDisplay control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
-
-        /// <summary>
-        /// btnAdminUser control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAdminUser;
+        protected global::System.Web.UI.WebControls.Button btnFilterOrDisplay;
     }
 }
