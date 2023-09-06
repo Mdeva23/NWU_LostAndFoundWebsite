@@ -21,12 +21,13 @@ namespace NWU_LostAndFoundWebsite
         SqlConnection con;
         //SqlDataAdapter adapter;
         //SqlDataReader dataReader;
+        public int value;
 
         public void loadAll()
         {
             try
             {
-                using(con = new SqlConnection(conString))
+                using (con = new SqlConnection(conString))
                 {
                     con.Open();
                     command = new SqlCommand("SELECT * tblReports", con);
@@ -37,6 +38,8 @@ namespace NWU_LostAndFoundWebsite
                     // Bind the DataTable to the GridView
                     GridViewReport.DataSource = dt;
                     GridViewReport.DataBind();
+
+                    con.Close();
 
                 }
             }
@@ -50,13 +53,43 @@ namespace NWU_LostAndFoundWebsite
         {
             try
             {
-                using(con = new SqlConnection(conString))
+                using (con = new SqlConnection(conString))
                 {
                     con.Open();
+                    if (value == 0)
+                    {
+                        loadAll();
+                    }
+                    else if (value == 1)
+                    {
+                        command = new SqlCommand("SELECT * tblItems", con);
+                        SqlDataAdapter da = new SqlDataAdapter(command);
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
 
+                        // Bind the DataTable to the GridView
+                        GridViewReport.DataSource = dt;
+                        GridViewReport.DataBind();
+                    }
+                    else if (value == 3)
+                    {
+                        command = new SqlCommand("SELECT * tblUsers", con);
+                        SqlDataAdapter da = new SqlDataAdapter(command);
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+
+                        // Bind the DataTable to the GridView
+                        GridViewReport.DataSource = dt;
+                        GridViewReport.DataBind();
+                    }
+                    else
+                    {
+                        Console.WriteLine("Please select report type");
+                    }
+                    con.Close();
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + ex.Message + "');", true);
             }
@@ -64,7 +97,22 @@ namespace NWU_LostAndFoundWebsite
 
         protected void RadioButtonList1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            string selectedValue = RadioButtonList1.SelectedValue;
+
+            switch (selectedValue)
+            {
+                case "VDR":
+                    value = 0;
+                    break;
+
+                case "VRI":
+                    value = 1;
+                    break;
+
+                case "VCI":
+                    value = 2;
+                    break;
+            }
         }
     }
 }
