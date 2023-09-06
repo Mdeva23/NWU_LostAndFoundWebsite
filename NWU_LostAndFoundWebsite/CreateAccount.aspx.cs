@@ -12,7 +12,17 @@ namespace NWU_LostAndFoundWebsite
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            AddColumnToTable();
+        }
 
+        public void AddColumnToTable()
+        {
+            using (con = new SqlConnection(conString))
+            {
+                con.Open();
+                command = new SqlCommand("ALTER TABLE tblUsers ADD userPassword VARCHAR(45)", con);
+                command.ExecuteNonQuery();
+            }
         }
 
         string conString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\David\Dropbox\PC\Desktop\CMPG223\NWU_LostAndFoundWebsite\NWU_LostAndFoundWebsite\NWU_LostAndFoundWebsite\App_Data\LostAndFound.mdf;Integrated Security=True";
