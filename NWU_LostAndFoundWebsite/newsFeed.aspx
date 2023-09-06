@@ -8,10 +8,15 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        If you would like do DELETE OR CHANGE your account details click on the link
+        <asp:LinkButton ID="LinkButtonMaintainAccount" runat="server">MaintainAccount</asp:LinkButton>
+&nbsp;<br />
         <asp:TextBox ID="txtSearchForItem" runat="server" Width="518px"></asp:TextBox>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="btnSearch" runat="server" Text="Search For Item" OnClick="btnSearch_Click" />
+        &nbsp;&nbsp;&nbsp;&nbsp;
         <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <br />
         Lost Items<br />
         <asp:ListBox ID="ListBoxItems" runat="server" Height="295px" Width="789px"></asp:ListBox>
