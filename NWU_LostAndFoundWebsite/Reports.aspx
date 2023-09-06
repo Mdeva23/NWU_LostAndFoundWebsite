@@ -22,7 +22,7 @@
             Enter the filter you want to apply:<br />
             <asp:TextBox ID="txtFilter" runat="server"></asp:TextBox>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Button ID="btnFilterOrDisplay" runat="server" Text="Filter/Display Report" Font-Bold="True" Font-Names="Arial Narrow" />
+            <asp:Button ID="btnFilterOrDisplay" runat="server" Text="Filter/Display Report" Font-Bold="True" Font-Names="Arial Narrow" OnClick="btnFilterOrDisplay_Click" />
         </div>
     </form>
 </body>
