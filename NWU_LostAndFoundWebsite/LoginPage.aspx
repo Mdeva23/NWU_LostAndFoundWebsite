@@ -21,14 +21,14 @@
             Email:<br />
             <asp:TextBox ID="txtLoginEmail" runat="server"></asp:TextBox>
             <br />
-            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtLoginEmail" ErrorMessage="IncorrectFormat!" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ForeColor="Fuchsia"></asp:RegularExpressionValidator>
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtLoginEmail" ErrorMessage="IncorrectFormat!" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ForeColor="Fuchsia" SetFocusOnError="True"></asp:RegularExpressionValidator>
             <br />
             <br />
             <br />
             Password:<br />
             <asp:TextBox ID="txtLoginPassword" runat="server"></asp:TextBox>
             <br />
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtLoginPassword" ErrorMessage="Required!" ForeColor="Fuchsia"></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtLoginPassword" ErrorMessage="Required!" ForeColor="Fuchsia" SetFocusOnError="True"></asp:RequiredFieldValidator>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Button ID="btnLogin" runat="server" Text="Login" Width="126px" OnClick="btnLogin_Click" Font-Names="Arial Narrow" Height="26px" />
             <br />

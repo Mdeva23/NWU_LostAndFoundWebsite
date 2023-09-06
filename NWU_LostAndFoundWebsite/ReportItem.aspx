@@ -15,7 +15,7 @@
             Category of the Item&nbsp;
             <asp:DropDownList ID="DropDownListCategory" runat="server">
             </asp:DropDownList>
-&nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="DropDownListCategory" ErrorMessage="Required!"></asp:RequiredFieldValidator>
+&nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="DropDownListCategory" ErrorMessage="Required!" SetFocusOnError="True"></asp:RequiredFieldValidator>
             <br />
             <br />
             <br />
