@@ -18,8 +18,8 @@ namespace NWU_LostAndFoundWebsite
         string conString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\David\Dropbox\PC\Desktop\CMPG223\NWU_LostAndFoundWebsite\NWU_LostAndFoundWebsite\NWU_LostAndFoundWebsite\App_Data\LostAndFound.mdf;Integrated Security=True";
         SqlCommand command;
         SqlConnection con;
-        SqlDataAdapter adapter;
-        SqlDataReader dataReader;
+        //SqlDataAdapter adapter;
+        //SqlDataReader dataReader;
 
 
         protected void btnCreateAccount_Click(object sender, EventArgs e)
@@ -39,8 +39,8 @@ namespace NWU_LostAndFoundWebsite
                     using(con = new SqlConnection(conString))
                     {
                         con.Open();      //OPENING THE SQL CONNECTION
-                        command = new SqlCommand("INSERT INTO tblUsers(userID, userName, userSurname, userEmail, userContact, userPassword) VALUES(@id, @name, @surname, @email, @contact, @pass)", con);   //INSERTING VALUES INTO THE TABLES
-                        command.Parameters.AddWithValue("@id", "Value");
+                        command = new SqlCommand("INSERT INTO tblUsers(userName, userSurname, userEmail, userContact, userPassword) VALUES(@name, @surname, @email, @contact, @pass)", con);   //INSERTING VALUES INTO THE TABLES
+                        //command.Parameters.AddWithValue("@id",);
                         command.Parameters.AddWithValue("@name", name);
                         command.Parameters.AddWithValue("@surname", surname);
                         command.Parameters.AddWithValue("@email", email);
@@ -49,6 +49,7 @@ namespace NWU_LostAndFoundWebsite
                         command.ExecuteNonQuery();
 
                         con.Close();      //CLOSING THE CONNECTION
+                        Response.Redirect("LoginPage.aspx");
                     }
                 }
                 else
