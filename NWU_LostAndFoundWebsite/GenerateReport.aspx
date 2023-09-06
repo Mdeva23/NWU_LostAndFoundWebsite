@@ -19,12 +19,14 @@
             <br />
             Password:<br />
             <asp:TextBox ID="txtAdminPassword" runat="server"></asp:TextBox>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtAdminPassword" ErrorMessage="Required!"></asp:RequiredFieldValidator>
             <br />
             <br />
+            <asp:Label ID="lblincorrectEmail" runat="server"></asp:Label>
             <br />
-            <asp:Button ID="btnAdminUser" runat="server" OnClick="btnAdminUser_Click" Text="Login as Admin" />
         </div>
+        <p>
+            <asp:Button ID="btnAdminUser" runat="server" OnClick="btnAdminUser_Click" Text="Login as Admin" />
+        </p>
     </form>
 </body>
 </html>

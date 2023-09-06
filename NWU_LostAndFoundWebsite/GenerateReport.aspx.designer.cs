@@ -51,13 +51,13 @@ namespace NWU_LostAndFoundWebsite
         protected global::System.Web.UI.WebControls.TextBox txtAdminPassword;
 
         /// <summary>
-        /// RequiredFieldValidator1 control.
+        /// lblincorrectEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        protected global::System.Web.UI.WebControls.Label lblincorrectEmail;
 
         /// <summary>
         /// btnAdminUser control.

@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
-
+using System.Data;
 namespace NWU_LostAndFoundWebsite
 {
     public partial class GenerateReport : System.Web.UI.Page
@@ -15,28 +15,25 @@ namespace NWU_LostAndFoundWebsite
         {
 
         }
-        string conString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\David\Dropbox\PC\Desktop\CMPG223\NWU_LostAndFoundWebsite\NWU_LostAndFoundWebsite\NWU_LostAndFoundWebsite\App_Data\LostAndFound.mdf;Integrated Security=True";
-        SqlCommand command;
-        SqlConnection con;
-        SqlDataAdapter adapter;
-        SqlDataReader dataReader;
+       
 
         protected void btnAdminUser_Click(object sender, EventArgs e)
         {
-            try
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\David\Dropbox\PC\Desktop\CMPG223\NWU_LostAndFoundWebsite\NWU_LostAndFoundWebsite\NWU_LostAndFoundWebsite\App_Data\LostAndFound.mdf;Integrated Security=True");
+            SqlDataAdapter adapt = new SqlDataAdapter("Select (*) from tblAdministrator where administratorEmail = '" + txtAdminEmail.Text, con);
+            DataTable dt = new DataTable();
+            adapt.Fill(dt);
+            if (dt.Rows[0].ToString() == "1")
             {
-                using(con = new SqlConnection(conString))
-                {
-                    con.Open();
-                    string query1 = "SELECT * FROM tblAdministrator WHERE administratorEmail = '"+txtAdminEmail.Text+"' ";
-
-                    
-                }
+                Response.Redirect("Reports.aspx");
             }
-            catch
+            else
             {
-
+                lblincorrectEmail.Text = "incorrect email or password";
+                
             }
         }
+
+    
     }
 }
