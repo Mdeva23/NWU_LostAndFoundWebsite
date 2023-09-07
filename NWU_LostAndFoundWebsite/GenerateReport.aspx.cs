@@ -19,18 +19,43 @@ namespace NWU_LostAndFoundWebsite
 
         protected void btnAdminUser_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\David\Dropbox\PC\Desktop\CMPG223\NWU_LostAndFoundWebsite\NWU_LostAndFoundWebsite\NWU_LostAndFoundWebsite\App_Data\LostAndFound.mdf;Integrated Security=True");
-            SqlDataAdapter adapt = new SqlDataAdapter("Select (*) from tblAdministrator where administratorEmail = '" + txtAdminEmail.Text, con);
-            DataTable dt = new DataTable();
-            adapt.Fill(dt);
-            if (dt.Rows[0].ToString() == "1")
+            try
             {
-                Response.Redirect("Reports.aspx");
+                using (SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\David\Dropbox\PC\Desktop\CMPG223\NWU_LostAndFoundWebsite\NWU_LostAndFoundWebsite\NWU_LostAndFoundWebsite\App_Data\LostAndFound.mdf;Integrated Security=True"))
+                {
+                    con.Open();
+
+                    // Use a parameterized query to avoid SQL injection
+                    string query = "SELECT * FROM tblAdministrator WHERE administratorEmail = @adminEmail";
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    cmd.Parameters.AddWithValue("@adminEmail", txtAdminEmail.Text);
+
+                    SqlDataAdapter adapt = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    adapt.Fill(dt);
+
+                    if (dt.Rows.Count == 1)
+                    {
+                        // Administrator found, you would typically check the password here
+                        // Create a cookie that lasts for 1 minute
+                        HttpCookie adminCookie = new HttpCookie("AdminCookie");
+                        adminCookie.Value = "AdminLoggedIn"; // Set a value to indicate admin login
+                        adminCookie.Expires = DateTime.Now.AddMinutes(1); // Set the expiration time
+
+                        Response.Cookies.Add(adminCookie);
+
+                        Response.Redirect("Reports.aspx");
+                    }
+                    else
+                    {
+                        lblincorrectEmail.Text = "Incorrect email or password";
+                    }
+                }
             }
-            else
+            catch (Exception ex)
             {
-                lblincorrectEmail.Text = "incorrect email or password";
-                
+                // Handle any database-related exceptions here
+                lblincorrectEmail.Text = ex.Message;
             }
         }
 

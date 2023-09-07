@@ -86,5 +86,10 @@ namespace NWU_LostAndFoundWebsite
         {
 
         }
+
+        protected void ListBoxClaimedItem_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

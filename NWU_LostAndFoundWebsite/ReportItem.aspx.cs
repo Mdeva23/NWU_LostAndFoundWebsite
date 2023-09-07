@@ -79,5 +79,10 @@ namespace NWU_LostAndFoundWebsite
 
             }
         }
+
+        protected void DropDownListCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

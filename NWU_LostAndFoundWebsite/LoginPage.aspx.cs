@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Data;
+using System.Web.Configuration;
 
 namespace NWU_LostAndFoundWebsite
 {
@@ -18,29 +19,47 @@ namespace NWU_LostAndFoundWebsite
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
+
             HttpCookie cookie = new HttpCookie("mycookie");
             cookie.Value = txtLoginPassword.Text;
             cookie.Expires = DateTime.Now.AddMinutes(1);
             Response.Cookies.Add(cookie);
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\David\Dropbox\PC\Desktop\CMPG223\NWU_LostAndFoundWebsite\NWU_LostAndFoundWebsite\NWU_LostAndFoundWebsite\App_Data\LostAndFound.mdf;Integrated Security=True");
-            //SqlDataAdapter adapt = new SqlDataAdapter("Select (*) from tblUsers where userName = '" + txtLoginEmail.Text + "' and userPassword = '" + txtLoginPassword.Text, con);
-            SqlDataAdapter adapt = new SqlDataAdapter("Select (*) from tblUsers where userName = '" + txtLoginEmail.Text + "'", con);
-            DataTable dt = new DataTable();
-            adapt.Fill(dt);
-            if (dt.Rows[0][0].ToString() == "1")
+            try
             {
-                Response.Redirect("newsFeed.aspx");
+                using (SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\LostAndFound.mdf;Integrated Security=True"))
+                {
+                    con.Open();
+
+                    // Use a parameterized query to avoid SQL injection
+                    string query = "SELECT COUNT(*) FROM tblUsers WHERE userEmail = @userEmail";
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    cmd.Parameters.AddWithValue("@userEmail", txtLoginEmail.Text);
+
+                    int userCount = (int)cmd.ExecuteScalar();
+
+                    if (userCount == 1)
+                    {
+                        // User found, you would typically check the password here
+                        Response.Redirect("newsFeed.aspx");
+                    }
+                    else
+                    {
+                        lblEmailOrPassIncorrect.Text = "Email or password is incorrect. Please try again.";
+                    }
+                }
             }
-            else
+            catch (Exception ex)
             {
-                lblEmailOrPassIncorrect.Text = "Email or password is incorrect please try again";
-                string str = Request.Cookies["mycookie"].Value;
-                Response.Write(str);
+                // Handle any database-related exceptions here
+                lblEmailOrPassIncorrect.Text = "An error occurred while processing your request.";
+                // Log the exception for debugging purposes, don't display the error message to users
+                // You can use ex.ToString() to get the complete error message for logging.
             }
         }
 
         protected void btnSignUp_Click(object sender, EventArgs e)
         {
+
             Response.Redirect("CreateAccount.aspx");
         }
     }

@@ -59,9 +59,9 @@ namespace NWU_LostAndFoundWebsite
                         //command.Parameters.AddWithValue("@pass", password);
                         command.ExecuteNonQuery();
 
-                        Response.Redirect("LoginPage.aspx");
                         con.Close();      //CLOSING THE CONNECTION
                     }
+                    Response.Redirect("LoginPage.aspx");
                 }
                 else
                 {
@@ -72,6 +72,11 @@ namespace NWU_LostAndFoundWebsite
             {
                 Console.WriteLine(ex.Message);
             }
+        }
+
+        protected void btnLogin_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("LoginPage.aspx");
         }
     }
 }
