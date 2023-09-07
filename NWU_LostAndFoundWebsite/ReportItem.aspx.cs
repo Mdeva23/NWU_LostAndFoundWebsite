@@ -31,6 +31,16 @@ namespace NWU_LostAndFoundWebsite
 
         protected void btnReport_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        protected void DropDownListCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnUpload_Click(object sender, EventArgs e)
+        {
             try
             {
                 if (FileUploadPicture.HasFile)
@@ -78,11 +88,6 @@ namespace NWU_LostAndFoundWebsite
                 Label1.ForeColor = System.Drawing.Color.Red;
 
             }
-        }
-
-        protected void DropDownListCategory_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

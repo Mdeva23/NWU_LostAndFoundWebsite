@@ -23,6 +23,9 @@
             <br />
             Upload picture of item<br />
             <asp:FileUpload ID="FileUploadPicture" runat="server" Width="806px" />
+            <br />
+            <br />
+            <asp:Button ID="btnUpload" runat="server" OnClick="btnUpload_Click" Text="Upload" Width="141px" />
         </div>
     </form>
 </body>

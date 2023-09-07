@@ -1,57 +1,42 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 
 namespace NWU_LostAndFoundWebsite
 {
     public partial class CreateAccount : System.Web.UI.Page
     {
+        // Define your SqlConnection and SqlCommand as class members
+        private string conString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\David\Dropbox\PC\Desktop\CMPG223\NWU_LostAndFoundWebsite\NWU_LostAndFoundWebsite\NWU_LostAndFoundWebsite\App_Data\LostAndFound.mdf;Integrated Security=True";
+        private SqlConnection con;
+        private SqlCommand command;
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            //AddColumnToTable();
+            // Add any necessary code for Page_Load if needed
         }
-
-        /*public void AddColumnToTable()
-        {
-            using (con = new SqlConnection(conString))
-            {
-                con.Open();
-                command = new SqlCommand("ALTER TABLE tblUsers ADD userPassword VARCHAR(45)", con);
-                command.ExecuteNonQuery();
-            }
-        }*/
-
-        string conString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\David\Dropbox\PC\Desktop\CMPG223\NWU_LostAndFoundWebsite\NWU_LostAndFoundWebsite\NWU_LostAndFoundWebsite\App_Data\LostAndFound.mdf;Integrated Security=True";
-        SqlCommand command;
-        SqlConnection con;
-        //SqlDataAdapter adapter;
-        //SqlDataReader dataReader;
-
 
         protected void btnCreateAccount_Click(object sender, EventArgs e)
         {
             try
             {
-                //DECLARING THE VARIABLES REQUIRED TO CREATE ACCOUNT
-                String name = txtName.Text;
-                String surname = txtSurname.Text;
-                String email = txtEmail.Text;
-                String contact = txtContact.Text;
-                String password = txtPassword.Text;
-                String reEnterPassword = txtReEnterPass.Text;
+                // Get input values
+                string name = txtName.Text;
+                string surname = txtSurname.Text;
+                string email = txtEmail.Text;
+                string contact = txtContact.Text;
+                string password = txtPassword.Text;
+                string reEnterPassword = txtReEnterPass.Text;
 
-                if(password == reEnterPassword)    //CHECKING IF THE PASSWORDS MATCH
+                if (password == reEnterPassword)
                 {
-                    using(con = new SqlConnection(conString))
+                    using (con = new SqlConnection(conString))
                     {
-                        con.Open();      //OPENING THE SQL CONNECTION
-                        //command = new SqlCommand("INSERT INTO tblUsers(userName, userSurname, userEmail, userContact, userPassword) VALUES(@name, @surname, @email, @contact, @pass)", con);
-                        command = new SqlCommand("INSERT INTO tblUsers(userName, userSurname, userEmail, userContact) VALUES(@name, @surname, @email, @contact)", con);   //INSERTING VALUES INTO THE TABLES
-                        //command.Parameters.AddWithValue("@id",);
+                        con.Open();
+                        // Use parameterized query to prevent SQL injection
+                        //string insertQuery = "INSERT INTO tblUsers(userName, userSurname, userEmail, userContact, userPassword) VALUES(@name, @surname, @email, @contact, @pass)";
+                        string insertQuery = "INSERT INTO tblUsers(userName, userSurname, userEmail, userContact) VALUES(@name, @surname, @email, @contact)";
+                        command = new SqlCommand(insertQuery, con);
                         command.Parameters.AddWithValue("@name", name);
                         command.Parameters.AddWithValue("@surname", surname);
                         command.Parameters.AddWithValue("@email", email);
@@ -59,18 +44,23 @@ namespace NWU_LostAndFoundWebsite
                         //command.Parameters.AddWithValue("@pass", password);
                         command.ExecuteNonQuery();
 
-                        con.Close();      //CLOSING THE CONNECTION
+                        // Use Response.Write to display messages on the web page
+                        Response.Write("Successfully created an account");
+
+                        con.Close();
                     }
+                    // Redirect after successful account creation
                     Response.Redirect("LoginPage.aspx");
                 }
                 else
                 {
-                    lblPassNotMatch.Text = "The passwords entered do not match. Please try again";  //MESSAGE TO MAKE USER AWARE OF DIFFERENT PASSWORDS
+                    lblPassNotMatch.Text = "The passwords entered do not match. Please try again";
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                // Use Response.Write to display error messages on the web page
+                Response.Write("An error occurred: " + ex.Message);
             }
         }
 
